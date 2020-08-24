@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="pag.css" rel="stylesheet" type="text/css" media="all" />
+    <title>FINAL FANTASY IX</title>
+</head>
+<body>
+
+<!--menu-->
+<div class="menu">
+    <ul>
+        <li class="titulo">INICIO</li>
+        <li class="titulo">HISTORIA</li>
+        <li class="titulo">PERSONAJES</li>
+        <li class="titulo">CONSOLAS</li>
+        <li class="titulo">PRODUCTOS</li>
+    </ul>
+</div>
+
+
+
+
+
+<!--intro-->
+<div class="intro">
+  <img class="logo" src="imgs/final-fantasy-ix2.png">
+  <img class="nubes" src="imgs/nubeS.png">
+  <p class="plot">Final Fantasy IX narra la historia del bandido Yitán Tribal, que planea secuestrar a la<br>
+    princesa de Alexandria, Garnet Til Alexandros XVII, junto a una banda de ladrones<br>
+    conocida como Tantalus. Tras un inesperado giro de acontecimientos, Yitán, Garnet,<br>
+    el tímido pero poderoso mago negro Vivi Ornitier, el leal caballero Adalbert Steiner y<br>
+    otros notables personajes se embarcan en un viaje épico en el que descubrirán<br>
+    mucho sobre sí mismos y también sobre los secretos del Cristal y la malvada fuerza<br>
+    que amenaza con destruir su mundo.</p>
+</div>
+
+
+
+
+
+<!--pj-->
+<div class="cyc">
+    
+    <img src="imgs/1.png" alt="Freija Crescent">
+    <img src="imgs/2.png" alt="Adalbert Steiner">
+    <img src="imgs/3.png" alt="Garnet Til Alexandros">
+    <img src="imgs/4.png" alt="Yitan Tribal">
+    <img src="imgs/5.png" alt="Vivi Ornitier">
+    <img src="imgs/6.png" alt="Eiko Carol">
+    <img src="imgs/7.png" alt="Quina Quen">
+    <img src="imgs/8.png" alt="Amarant Coral">
+
+</div>
+
+
+
+
+
+
+
+<!--moguri ayuda-->
+<div class="moguri">
+    <img class="mog" src="imgs/moogle float.png">
+    <p class="ayuda">TIENES<br>UN PROBLEMA?</p>
+</div>
+
+
+
+
+
+
+<!--slider-->
+<div class="ttl"><p class="titulo">CAPTURAS</p></div>
+<div class="sly">
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <img src="imgs/slider1.jpg.png" style="width:100%">
+    </div>
+  
+    <div class="mySlides fade">
+      <img src="imgs/slider2.png" style="width:100%">
+    </div>
+  
+    <div class="mySlides fade">
+      <img src="imgs/slider3.png" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="imgs/slider4.png" style="width:100%">
+      </div>
+
+    <div class="mySlides fade">
+        <img src="imgs/slider5.png" style="width:100%">
+      </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+  </div>
+</div>
+
+
+
+
+
+
+<!--pie-->
+<div class="gif">
+  <img class="jif" src="imgs/gifyitan.gif">
+  <div class="end"><p class="avent">¡AVENTÚRATE!</p>
+  <p class="juega">JUEGA AHORA</p>
+  </div>
+</div>
+
+
+
+
+
+
+
+<script>
+
+    //slider//
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+
+
+    </script>
+
+</body>
+</html>
